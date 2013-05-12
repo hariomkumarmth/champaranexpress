@@ -1,0 +1,97 @@
+/*this file is created so as to rectify the errors caused due to the conflicts between
+dijit and bootstrap.*/
+
+/*NEED FURTHER ATTENTION IF RESOLVED IN FUTURE */
+
+@import "dijitvariables";
+//@import "bootstrap/bootstrap.less";
+//@import "bootstrap/bootstrap-compiled.less";
+
+.marginrefix{
+  margin: 0px !important;
+}
+
+.refix {
+	padding: 0px !important;
+	margin: 0px !important;
+	background-color: transparent !important;
+	box-shadow: none !important;
+	text-shadow: none !important;
+	border: none !important;
+	border-radius: 0 !important;
+  background-position: 0px;
+}
+
+.radiusfix{      /*rounded corners of the combo buttons(added by shashank)*/
+	border-radius: 0px;
+}
+
+.custom-dropdown-menu {  /*custom dropdown menu as display: block; is creating a problem (added by shashank)*/
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: @zindexDropdown;
+  /*display: none; // none by default, but block on "open" of the menu*/
+  float: left;
+  min-width: 160px;
+  padding: 5px 0px;
+  margin: 2px 0 0; // override default ul
+  list-style: none;
+  background-color: @dropdownBackground;
+  border: 1px solid #ccc; // Fallback for IE7-8
+  border: 1px solid @dropdownBorder;
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+  .border-radius(6px);
+  .box-shadow(0 5px 10px rgba(0,0,0,.2));
+  -webkit-background-clip: padding-box;
+     -moz-background-clip: padding;
+          background-clip: padding-box;
+
+  // Aligns the dropdown menu to right
+  &.pull-right {
+    right: 0;
+    left: auto;
+    }
+  }
+
+.custom-arrow-button{ /*created some custom properties for the correct appearence of the arrow button container*/
+
+  padding: 4.5px !important;
+  width: 20px;
+  height: 20px;
+  border-radius: 0px;
+  border: 1px solid @btnBorder;
+}
+
+/*********************ADDED FOR CORRECTION  IN MENU-BAR ITEMS************************/
+.tweekformenuitemcolor{
+  background-color: @linkColor;
+}
+
+.adjuatmentmenutable{
+  border-collapse:separate;
+  border-spacing:0 0;
+}
+
+
+.adjustmentsformenuitemlabel{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.adjustmentsformenuitem{
+  padding: 2px;
+  margin: 0 0 0 4px;
+}
+/**************************************************************************************/
+
+.tooltipwidthfix{ 
+/*this is done to over-ride max width of tooltip-inner class coz the same width is used in create link in editor
+  which goes out..added by shashank*/
+  max-width: 100% !important;
+}
+
+.heighttweek{
+  height: 23px; /*this tweek fits number spinner arrows in the box*/
+}

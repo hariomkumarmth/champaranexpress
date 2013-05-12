@@ -1,0 +1,118 @@
+/* Time Picker 
+ *
+ * Styling the Time Picker consists of the following: 
+ *
+ * 1. minor time values
+ * 		.dijitTimePickerTick - set text color, size, background color of minor values
+ * 		.dijitTimePickerTickHover - set hover style of minor time values
+ * 		dijitTimePickerTickSelected - set selected style of minor time values
+ *
+ * 2. major time values - 1:00, 2:00, times on the hour 
+ * 		set text color, size, background color, left/right margins for "zoom" affect
+ * 		.dijitTimePickerMarkerHover - to set hover style of major time values
+ * 		.dijitTimePickerMarkerSelected - set selected style of major time values
+ * 
+ * 3. up and down arrow buttons
+ * 		.dijitTimePicker .dijitButtonNode - background-color, border
+ * 		.dijitTimePicker .dijitUpArrowHover, .dijitTimePicker .dijitDownArrowHover - set background-color for hover state
+ *
+ *	Other classes provide the fundamental structure of the TimePicker and should not be modified. 
+ */
+
+@import "dijitvariables";
+//@import "bootstrap/bootstrap.less";
+//@import "bootstrap/bootstrap-compiled.less";
+@import "supervars.less";
+
+/* override Button.css */
+.dijistrap .dijitTimePicker .dijitButtonNode {
+	/*padding: 0 0;
+	.border-radius(0);*/
+}
+.dijistrap .dijitTimePicker{
+	/*border:1px @border-color solid;
+	border-top:none;
+	border-bottom:none;
+	background-color:#fff;*/	/* TODO: useless?   Appears to be overridden by settings on individual elements */
+}
+.dijistrap .dijitTimePickerItem{
+	/* dijitTimePickerItem refers to both Tick's (minor values like 2:15, 2:30, 2:45) and Marker's (major values like 2PM, 3PM) */
+	/*.standard-gradient;
+	border-top:solid 1px @border-color;
+	border-bottom:solid 1px @border-color;
+	margin-right:-1px;
+	margin-left:-1px;
+	margin-top:-1px;*/
+}
+.dijistrap .dijitTimePickerTick {
+	/* minor value */
+	/*color:@timepicker-minorvalue-text-color;
+	background-color:@timepicker-minorvalue-background-color;
+	font-size:0.818em;*/
+}
+.dijistrap .dijitTimePickerMarker {
+	/* major value - 1:00, 2:00, times on the hour */
+	/*background-color: @timepicker-majorvalue-background-color;
+	font-size: 1em;
+	white-space: nowrap;*/
+}
+.dijistrap .dijitTimePickerTickHover,
+.dijistrap .dijitTimePickerMarkerHover,
+.dijistrap .dijitTimePickerMarkerSelected,
+.dijistrap .dijitTimePickerTickSelected {
+	/*background-color: @timepicker-value-hovered-background-color;
+	border:solid 1px @border-color;
+	margin-left:-7px;
+	margin-right:-7px;
+	color:@timepicker-value-hovered-text-color;*/
+}
+.dijistrap .dijitTimePickerMarkerSelected,
+.dijistrap .dijitTimePickerTickSelected {
+	/*font-size: 1em;*/
+}
+.dj_ie .dijistrap .dijitTimePickerTickHover,
+.dj_ie .dijistrap .dijitTimePickerMarkerHover,
+.dj_ie .dijistrap .dijitTimePickerMarkerSelected,
+.dj_ie .dijistrap .dijitTimePickerTickSelected  {
+	/*width: 114%;*/
+}
+.dj_ie6 .dijistrap .dijitTimePickerTickHover,
+.dj_ie6 .dijistrap .dijitTimePickerMarkerHover,
+.dj_ie6 .dijistrap .dijitTimePickerMarkerSelected,
+.dj_ie6 .dijistrap .dijitTimePickerTickSelected  {
+	/*position: relative; *//* creates widening of element */	
+	/*zoom: 1;*/ /* creates widening of element */
+}
+.dijistrap .dijitTimePickerTick .dijitTimePickerItemInner {
+	/*padding:1px;
+	margin:0;*/
+}
+.dijistrap .dijitTimePicker .dijitButtonNode {
+	/*border-left:none;
+	border-right:none;
+	border-color:@border-color;
+	background-color: @unselected-background-color;
+	.standard-gradient;*/
+}
+.dijistrap .dijitTimePicker .dijitArrowButtonInner{
+	/*height: 100%;*/ /* hack claro.button.css */
+	/*background-image: url(@image-form-common-arrows);
+	background-repeat: no-repeat;
+	background-position:-140px 45%;*/
+}
+.dijistrap .dijitTimePicker .dijitDownArrowButton .dijitArrowButtonInner{
+	/*background-position:-35px 45%;*/
+}
+/* hover */
+.dijistrap .dijitTimePicker .dijitUpArrowHover, 
+.dijistrap .dijitTimePicker .dijitDownArrowHover {
+	/*background-color: @timepicker-arrow-hovered-background-color;*/
+}
+.dijistrap .dijitTimePicker .dijitUpArrowHover .dijitArrowButtonInner {
+	/*background-position:-175px 45%;*/
+}
+.dijistrap .dijitTimePicker .dijitDownArrowHover .dijitArrowButtonInner {
+	/*background-position:-70px 45%;*/
+}
+
+// TODO: should have active rule, for clicking a .dijitTimePickerItem

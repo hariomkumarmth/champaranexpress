@@ -1,0 +1,92 @@
+/*
+Theme Name:     Voodoo Child 2012
+Theme URI:      http://www.rvoodoo.com/projects/wordpress/wordpress-tip-stop-editing-twentyten-theme-use-a-child-theme
+Description:    Child theme for the Twenty Twelve theme 
+Author:         Rev. Voodoo
+Author URI:     http://www.rvoodoo.com
+Template:       twentytwelve
+Version:        0.1.0
+*/
+@import url('../twentytwelve/style.css');
+
+/* This Block Adjusts the Overall Theme Width */
+footer[role="contentinfo"] {
+	max-width: 1100px;
+}
+@media screen and (min-width: 600px) {
+	.site {
+		max-width: 1100px;
+		max-width: 78.571428571rem;
+	}
+}
+.ie .site {
+	max-width: 1100px;
+}
+
+/* Adjust Colours and Custom spacing */
+a {
+	color: #401f1f;
+}
+article.format-aside .aside {
+	background: #eae0c7;
+	border-left: 22px solid #ae975f;
+}
+.wdgpo_gplus_page_large_icon {
+	margin-right: 10px;
+}
+.vudu-shortlink {
+	padding: 24px;
+}
+.widget {
+	background: #9e9786;
+	background: rgba(158, 151, 134, 0.4);
+	border: 4px double #ffffff;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-o-border-radius: 7px;
+	border-radius: 7px;
+	padding: 5px;
+	-webkit-box-shadow: 5px 5px 12px rgba(64, 31, 31, 0.5);
+	-moz-box-shadow: 5px 5px 12px rgba(64, 31, 31, 0.5);
+	box-shadow: 5px 5px 12px rgba(64, 31, 31, 0.5);
+	list-style-type: none;
+}
+.widget ul {
+	list-style: none;
+}
+.widget_tag_cloud .tagcloud {
+	text-align: center;
+}
+.beerwrap {
+	width: 151px;
+	height: 151px;
+	margin: 0 auto;
+}
+/* LIVEBLOG */
+.liveContainer {
+	background: #9e9786;
+	background: rgba(158, 151, 134, 0.6);
+	border: 4px double #ffffff;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-o-border-radius: 7px;
+	border-radius: 7px;
+	padding: 5px;
+	-webkit-box-shadow: 5px 5px 12px rgba(64, 31, 31, 0.5);
+	-moz-box-shadow: 5px 5px 12px rgba(64, 31, 31, 0.5);
+	box-shadow: 5px 5px 12px rgba(64, 31, 31, 0.5);
+	margin-bottom: 10px;
+}
+.liveDate {
+	width: 15%;
+	float: left;
+	color: #333;
+	color: rgba(0, 0, 0, 0.6);
+	text-shadow: 0 1px 1px #fff;
+	font-style: italic;
+	font-size: 1.2em;
+}
+.livePost {
+	width: 80%;
+	float: right;
+}

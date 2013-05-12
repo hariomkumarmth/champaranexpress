@@ -1,0 +1,344 @@
+/* Slider 
+ * 
+ * Styling Slider mainly includes styling the Slider progress bar (dijitSliderProgressBar)
+ * 
+ * Slider progress bar:
+ * 1. Slider progress bar (default styling): 
+ * 		.dijitSliderProgressBarH - progress bar at the middle of horizontal slider
+ * 		.dijitSliderLeftBumper - bar at the left of horizontal slider
+ * 		.dijitSliderRightBumper - bar at the right of horizontal slider
+ * 		.dijitSliderProgressBarV - progress bar at the middle of vertical slider
+ * 		.dijitSliderTopBumper - bar at the top of vertical slider
+ * 		.dijitSliderBottomtBumper - bar at the bottom of vertical slider
+ * 
+ * 2. hovered Slider progress bar (ie, mouse hover on progress bar)
+ * 		.dijitSliderHover .dijitSliderProgressBarH(horizontal) - hovered bar style: background, border
+ * 
+ * 3. focused Slider progress bar (ie, mouse focused on progress bar)
+ * 		.dijitSliderFocused .dijitSliderProgressBarH(horizontal) - focus bar style: background, border
+ * 
+ * 4. disabled/read-only Slider progress bar 
+ * 		.dijitSliderDisabled .dijitSliderProgressBarH(horizontal) - bar styles when slider is disabled
+ * 
+ * 
+ * Slider Thumbs:
+ * 1. Slider Thumbs (default styling): 
+ * 		.dijitSliderImageHandleH / .dijitSliderImageHandleV - styles for the controller on the progress bar
+ * 
+ * 2. hovered Slider Thumbs (ie, mouse hover on slider thumbs)
+ * 		.dijitSliderHover .dijitSliderImageHandleH - hovered controller style
+ * 
+ * 3. focused Slider progress bar (ie, mouse focused on slider thumbs)
+ * 		.dijitSliderFocused .dijitSliderImageHandleV - focused controller style
+ * 
+ * 
+ * Slider Increment/Decrement Buttons:
+ * 1. Slider Increment/Decrement Buttons (default styling): 
+ * 		.dijitSliderDecrementIconH - decrement icon which lies at the left of horizontal slider
+ * 		.dijitSliderIncrementIconH - increment icon which lies at the right of horizontal slider
+ * 		.dijitSliderDecrementIconV - decrement icon which lies at the bottom of vertical slider
+ * 		.dijitSliderIncrementIconV - increment icon which lies at the top of vertical slider
+ * 
+ * 2. hovered Slider Increment/Decrement Buttons (mouse hover on the icons)
+ * 		.dijitSliderHover .dijitSliderDecrementIconH - for background, border
+ * 
+ * 3. active Slider Increment/Decrement Buttons (mouse down on the icons)
+ * 		.dijitSliderActive .dijitSliderIncrementIconV - for background, border
+ * 
+ * 4. disabled/read-only Slider Increment/Decrement Buttons
+ * 		.dijitSliderDisabled .dijitSliderDecrementIconH - styles for the icons in disabled slider
+ * 		.dijitSliderReadOnly .dijitSliderIncrementIconV - styles for the icons in read-only slider
+ */
+
+@import "../dijitvariables";
+
+.dijistrap .dijitSliderBar {
+	border-style: solid;
+	outline: 1px;
+}
+.dijistrap .dijitSliderFocused .dijitSliderBar {
+	border-color: @focused-border-color;
+}
+.dijistrap .dijitSliderHover .dijitSliderBar {
+	border-color: @hovered-border-color;
+}
+.dijistrap .dijitSliderDisabled .dijitSliderBar {
+	background-image: none;
+	border-color: @disabled-border-color;
+}
+.dijistrap .dijitRuleLabelsContainer {
+	color: @text-color;
+}
+
+/* Horizontal Slider */
+
+.dijistrap .dijitRuleLabelsContainerH {
+	padding: 2px 0;
+}
+.dijistrap .dijitSlider .dijitSliderProgressBarH,
+.dijistrap .dijitSlider .dijitSliderLeftBumper{
+	border-color: @border-color;
+	background-color: #0088cc;
+	.alpha-white-gradient (top, 1,0px, 1,1px, 0,2px);
+}
+.dijistrap .dijitSlider .dijitSliderRemainingBarH,
+.dijistrap .dijitSlider .dijitSliderRightBumper{
+	border-color: @border-color;
+	background-color: @slider-remainingbar-background-color;
+}
+.dijistrap .dijitSliderRightBumper {
+	border-right: solid 1px @border-color;
+}
+.dijistrap .dijitSliderLeftBumper {
+	border-left: solid 1px @border-color;
+}
+.dijistrap .dijitSliderHover .dijitSliderProgressBarH,
+.dijistrap .dijitSliderHover .dijitSliderLeftBumper{
+	background-color: #0088cc;
+	border-color: @hovered-border-color;
+}
+.dijistrap .dijitSliderHover .dijitSliderRemainingBarH,
+.dijistrap .dijitSliderHover .dijitSliderRightBumper{
+	background-color: @slider-hovered-remainingbar-background-color;
+	border-color: @hovered-border-color;
+}
+.dijistrap .dijitSliderFocused .dijitSliderProgressBarH,
+.dijistrap .dijitSliderFocused .dijitSliderLeftBumper{
+	background-color: #0088cc;
+	border-color: @focused-border-color;
+	.box-shadow(inset 0px 1px 1px rgba(0, 0, 0, 0.2));
+}
+.dijistrap .dijitSliderFocused .dijitSliderRemainingBarH,
+.dijistrap .dijitSliderFocused .dijitSliderRightBumper{
+	background-color: @slider-focused-remainingbar-background-color;
+	border-color: @focused-border-color;
+	.box-shadow(inset 0px 1px 1px rgba(0, 0, 0, 0.2));
+}
+.dijistrap .dijitSliderDisabled .dijitSliderProgressBarH,
+.dijistrap .dijitSliderDisabled .dijitSliderLeftBumper{
+	background-color: @disabled-border-color;		/* left side of slider, fill matches border */
+	background-image:none;
+}
+.dijistrap .dijitSliderDisabled .dijitSliderRemainingBarH,
+.dijistrap .dijitSliderDisabled .dijitSliderRightBumper{
+	background-color: @disabled-background-color;
+}
+
+/* Vertical Slider */
+
+.dijistrap .dijitRuleLabelsContainerV {
+	padding: 0 2px;
+}
+.dijistrap .dijitSlider .dijitSliderProgressBarV,
+.dijistrap .dijitSlider .dijitSliderBottomBumper{
+	border-color: @border-color;
+	background-color: #0088cc;
+	.alpha-white-gradient (left, 1,0px, 0,1px);
+}
+.dijistrap .dijitSlider .dijitSliderRemainingBarV,
+.dijistrap .dijitSlider .dijitSliderTopBumper{
+	border-color: @border-color;
+	background-color: @slider-remainingbar-background-color;
+}
+.dijistrap .dijitSliderBottomBumper {
+	border-bottom: solid 1px @border-color;
+}
+.dijistrap .dijitSliderTopBumper {
+	border-top: solid 1px @border-color;
+}
+.dijistrap .dijitSliderHover .dijitSliderProgressBarV,
+.dijistrap .dijitSliderHover .dijitSliderBottomBumper{
+	background-color: #0088cc;
+	border-color: @hovered-border-color;
+}
+.dijistrap .dijitSliderHover .dijitSliderRemainingBarV,
+.dijistrap .dijitSliderHover .dijitSliderTopBumper{
+	background-color: @slider-hovered-remainingbar-background-color;
+	border-color: @hovered-border-color;
+}
+.dijistrap .dijitSliderFocused .dijitSliderProgressBarV,
+.dijistrap .dijitSliderFocused .dijitSliderBottomBumper{
+	background-color: #0088cc;
+	border-color: @focused-border-color;
+	.box-shadow(inset 1px 0px 1px rgba(0, 0, 0, 0.2));
+}
+.dijistrap .dijitSliderFocused .dijitSliderRemainingBarV,
+.dijistrap .dijitSliderFocused .dijitSliderTopBumper{
+	background-color: @slider-focused-remainingbar-background-color;
+	border-color: @focused-border-color;
+	.box-shadow(inset 1px 0px 1px rgba(0, 0, 0, 0.2));
+}
+.dijistrap .dijitSliderDisabled .dijitSliderProgressBarV,
+.dijistrap .dijitSliderDisabled .dijitSliderBottomBumper{
+	background-color: @disabled-border-color;	/* bottom side of slider, fill matches border */
+}
+.dijistrap .dijitSliderDisabled .dijitSliderRemainingBarV,
+.dijistrap .dijitSliderDisabled .dijitSliderTopBumper{
+	background-color: @disabled-background-color;
+}
+
+
+/* ------- Thumbs ------- */
+
+.dijistrap .dijitSliderImageHandleH {
+	border: 0;
+	width: 18px;
+	height: 16px;
+	background-image: url("../@{image-form-slider-thumbs}");
+	background-repeat:no-repeat;
+	background-position:0 0;
+}
+.dijistrap .dijitSliderHover .dijitSliderImageHandleH {
+	background-position:-18px 0;
+}
+.dijistrap .dijitSliderFocused .dijitSliderImageHandleH {
+	background-position:-36px 0;
+}
+.dijistrap .dijitSliderProgressBarH .dijitSliderThumbHover{
+	background-position:-36px 0;
+}
+.dijistrap .dijitSliderProgressBarH .dijitSliderThumbActive{
+	background-position:-36px 0;
+}
+.dijistrap .dijitSliderReadOnly .dijitSliderImageHandleH,
+.dijistrap .dijitSliderDisabled .dijitSliderImageHandleH {
+	background-position:-54px 0;
+}
+.dijistrap .dijitSliderImageHandleV {
+	border: 0;
+	width: 18px;
+	height: 16px;
+	background-image: url("../@{image-form-slider-thumbs}");
+	background-repeat:no-repeat;
+	background-position:-289px 0;
+}
+.dijistrap .dijitSliderHover .dijitSliderImageHandleV {
+	background-position:-307px 0;
+}
+.dijistrap .dijitSliderFocused .dijitSliderImageHandleV {
+	background-position:-325px 0;
+}
+.dijistrap .dijitSliderProgressBarV .dijitSliderThumbHover{
+	background-position:-325px 0;
+}
+.dijistrap .dijitSliderProgressBarV .dijitSliderThumbActive{
+	background-position:-325px 0;
+}
+.dijistrap .dijitSliderReadOnly .dijitSliderImageHandleV,
+.dijistrap .dijitSliderDisabled .dijitSliderImageHandleV {
+	background-position:-343px 0;
+}
+
+/* ---- Increment/Decrement Buttons ---- */
+
+.dijistrap .dijitSliderButtonContainerH{
+	padding: 1px 3px 1px 2px;
+}
+.dijistrap .dijitSliderButtonContainerV{
+	padding: 3px 1px 2px 1px;
+}
+.dijistrap .dijitSliderDecrementIconH,
+.dijistrap .dijitSliderIncrementIconH,
+.dijistrap .dijitSliderDecrementIconV,
+.dijistrap .dijitSliderIncrementIconV {
+	background-image: url("../@{image-form-common-arrows}");
+	background-repeat:no-repeat;
+	background-color: @arrowbutton-background-color;
+	.border-radius(2px);
+	border: solid 1px @border-color;
+	font-size: 1px;
+}
+.dijistrap .dijitSliderDecrementIconH,
+.dijistrap .dijitSliderIncrementIconH {
+	height: 12px;
+	width: 9px;
+}
+.dijistrap .dijitSliderDecrementIconV,
+.dijistrap .dijitSliderIncrementIconV {
+	height: 9px;
+	width: 12px;
+}
+.dijistrap .dijitSliderActive .dijitSliderDecrementIconH,
+.dijistrap .dijitSliderActive .dijitSliderIncrementIconH,
+.dijistrap .dijitSliderActive .dijitSliderDecrementIconV,
+.dijistrap .dijitSliderActive .dijitSliderIncrementIconV,
+.dijistrap .dijitSliderHover .dijitSliderDecrementIconH,
+.dijistrap .dijitSliderHover .dijitSliderIncrementIconH,
+.dijistrap .dijitSliderHover .dijitSliderDecrementIconV,
+.dijistrap .dijitSliderHover .dijitSliderIncrementIconV {
+	/* dijitSliderActive should be treated as dijitSliderHover since "clicking the slider" has no meaning */
+	border: solid 1px @hovered-border-color;
+	background-color: @slider-hoveredButton-background-color;
+}
+
+.dijistrap .dijitSliderDecrementIconH {
+	background-position:-357px 50%;
+}
+.dijistrap .dijitSliderActive .dijitSliderDecrementIconH
+.dijistrap .dijitSliderHover .dijitSliderDecrementIconH {
+	background-position:-393px 50%;
+}
+.dijistrap .dijitSliderIncrementIconH {
+	background-position:-251px 50%;
+}
+.dijistrap .dijitSliderActive .dijitSliderIncrementIconH
+.dijistrap .dijitSliderHover .dijitSliderIncrementIconH {
+	background-position:-283px 50%;
+}
+.dijistrap .dijitSliderDecrementIconV {
+	background-position:-38px 50%;
+}
+.dijistrap .dijitSliderActive .dijitSliderDecrementIconV
+.dijistrap .dijitSliderHover .dijitSliderDecrementIconV {
+	background-position:-73px 50%;
+}
+.dijistrap .dijitSliderIncrementIconV {
+	background-position:-143px 49%;
+}
+.dijistrap .dijitSliderActive .dijitSliderIncrementIconV
+.dijistrap .dijitSliderHover .dijitSliderIncrementIconV {
+	background-position:-178px 49%;
+}
+.dijistrap .dijitSliderButtonContainerV .dijitSliderDecrementButtonHover,
+.dijistrap .dijitSliderButtonContainerH .dijitSliderDecrementButtonHover,
+.dijistrap .dijitSliderButtonContainerV .dijitSliderIncrementButtonHover,
+.dijistrap .dijitSliderButtonContainerH .dijitSliderIncrementButtonHover {
+	background-color: @slider-button-hovered-background-color;
+}
+.dijistrap .dijitSliderButtonContainerV .dijitSliderDecrementButtonActive,
+.dijistrap .dijitSliderButtonContainerH .dijitSliderDecrementButtonActive,
+.dijistrap .dijitSliderButtonContainerV .dijitSliderIncrementButtonActive,
+.dijistrap .dijitSliderButtonContainerH .dijitSliderIncrementButtonActive {
+	background-color: @slider-button-pressed-background-color;
+	border-color:@pressed-border-color;
+}
+.dijistrap .dijitSliderButtonInner {
+	visibility: hidden;
+}
+.dijistrap .dijitSliderDisabled .dijitSliderBar{
+	border-color: @disabled-border-color;
+}
+.dijistrap .dijitSliderReadOnly *,.dijistrap .dijitSliderDisabled * {
+	border-color: @disabled-border-color;
+	color: @disabled-text-color;
+}
+.dijistrap .dijitSliderReadOnly .dijitSliderDecrementIconH,
+.dijistrap .dijitSliderDisabled .dijitSliderDecrementIconH {
+	background-position:-321px 50%;
+	background-color:@disabled-background-color;
+}
+.dijistrap .dijitSliderReadOnly .dijitSliderIncrementIconH,
+.dijistrap .dijitSliderDisabled .dijitSliderIncrementIconH {
+	background-position:-215px 50%;
+	background-color:@disabled-background-color;
+}
+.dijistrap .dijitSliderReadOnly .dijitSliderDecrementIconV,
+.dijistrap .dijitSliderDisabled .dijitSliderDecrementIconV {
+	background-position:-3px 49%;
+	background-color:@disabled-background-color;
+}
+.dijistrap .dijitSliderReadOnly .dijitSliderIncrementIconV,
+.dijistrap .dijitSliderDisabled .dijitSliderIncrementIconV {
+	background-position:-107px 49%;
+	background-color:@disabled-background-color;
+}

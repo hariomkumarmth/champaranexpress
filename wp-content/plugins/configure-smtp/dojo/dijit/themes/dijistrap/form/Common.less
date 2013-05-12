@@ -1,0 +1,296 @@
+/* claro/form/Common.css */
+
+/*========================= common css =========================*/
+
+@import "../dijitvariables.less";
+//@import "../bootstrap/bootstrap-compiled.less";
+//@import "../bootstrap/bootstrap.less";
+@import "../supervars.less";
+
+/* 'dijitTextBox' refers to 'dijit(TextBox|DateTextBox|CurrencyTextBox|...)' */
+
+.dijistrap .dijitTextBox{
+	input[type="text"];
+
+}
+	/*input[type="text"];*/
+.dijistrap .dijitInputInner {
+    /*// .dijitInputInner selector needed for ValidationTextBox on IE6 because <input> doesn't inherit
+    // the color setting from the ancestor div.dijitTextBox*/
+	/*color: @text-color;*/
+	/*.refix;*/
+
+}
+
+.dijistrap .dijitValidationTextBoxError .dijitValidationContainer {
+	/*background-color: @erroricon-background-color;
+	background-image: url("../@{image-form-error}");
+	background-position: top center;
+	border: solid @erroricon-background-color 0;
+	width: 9px;*/
+	/*display: none;*/
+	
+}
+
+.dijistrap .dijitTextBoxError .dijitValidationContainer {
+	/*border-left-width: 1px;*/
+	/*.control-group.error;*/
+	
+}
+
+.dijistrap .dijitValidationTextBoxError .dijitValidationIcon {
+	/*width: 0;
+	background-color: transparent !important;*/ /* so the INPUT doesn't obscure the border in rtl+a11y */
+	/*.control-group.error;*/
+	
+}
+
+/* Padding for the input area of TextBox based widgets, and corresponding padding for the
+ * down arrow button and the placeholder.   placeholder is explicitly listed  because
+ * dijitPlaceHolder is absolutely positioned, so padding set on dijitInputField
+ * won't affect it
+ */
+
+.dijistrap .dijitTextBoxError { /*added by shashank from styl file*/
+    
+    .control-group.error;
+}
+
+.dijistrap .dijitTextBoxError.dijitTextBoxFocused {  /*added by shashank from styl file*/
+    /*box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px lighten(gold, 20%);*/
+    
+    input:focus:required:invalid; /*not working*/
+    
+    
+}
+
+.dijistrap .dijitValidationContainer { /*added by shashank from styl file*/
+    .hide;
+}
+
+
+
+
+
+
+
+
+
+
+.dijistrap .dijitTextArea,
+.dijistrap .dijitInputField .dijitPlaceHolder {
+	/*padding: @textbox-padding;*/
+}
+
+.dijistrap .dijitSelect .dijitInputField{
+	
+}
+.dijistrap .dijitTextBox .dijitInputField {
+	/*// Subtract 1px from top/bottom because we add 1px to other nodes, see rules below.
+	// Although we are theoretically only adding 1px to top/bottom browsers seem to pad inputs by 1px on left/right,
+	// although that varies by so compensate for that too.*/
+	/*padding: @textbox-padding - 1px  @textbox-padding;*/
+	//input[type="text"];
+}
+
+.dj_gecko .dijistrap .dijitTextBox .dijitInputInner,
+.dj_webkit .dijistrap .dijitTextBox .dijitInputInner {
+	/*// Although we are theoretically only adding 1px to top/bottom, some browsers seem to pad inputs by 1px on left/right,
+	// so compensate for that too.*/
+	/*padding: @textbox-padding - 1px;*/
+}
+
+.dijistrap .dijitSelect,
+.dijistrap .dijitSelect .dijitButtonContents{
+	select;
+}
+.dijistrap .dijitTextBox,
+.dijistrap .dijitTextBox .dijitButtonNode {
+	/* color for (outer) border on *TextBox widgets, and border between input and buttons on ComboBox and Spinner */
+	/*border-color: @border-color;
+	.transition-property(background-color, border);
+ 	.transition-duration(.35s);*/
+ 	
+
+}
+
+.dijistrap .dijitSelect,
+.dijistrap .dijitTextBox {
+	/*background-color: @textbox-background-color;*/
+	/*.btn;*/
+	.dropdown-toggle;
+}
+
+/* hover */
+.dijistrap .dijitSelectHover,
+.dijistrap .dijitSelectHover .dijitButtonContents,
+.dijistrap .dijitTextBoxHover,
+.dijistrap .dijitTextBoxHover .dijitButtonNode {
+	/*border-color: @hovered-border-color;
+ 	.transition-duration(.25s);*/
+}
+
+.dijistrap .dijitTextBoxHover {
+	/*background-color: @textbox-hovered-background-color;
+	.textbox-background-image;*/
+}
+
+/* error state */
+.dijistrap .dijitSelectError,
+.dijistrap .dijitSelectError .dijitButtonContents,
+.dijistrap .dijitTextBoxError,
+.dijistrap .dijitTextBoxError .dijitButtonNode {
+	/*border-color: @error-border-color;*/
+}
+
+/* focused state */
+.dijistrap .dijitSelectFocused,
+.dijistrap .dijitSelectFocused .dijitButtonContents{
+	
+}
+.dijistrap .dijitTextBoxFocused,
+.dijistrap .dijitTextBoxFocused .dijitButtonNode {
+	/*border-color:@focused-border-color;
+ 	.transition-duration(.1s);*/
+	input[type="text"]:focus;
+}
+
+.dijistrap .dijitTextBoxFocused {
+	/*background-color: @textbox-focused-background-color;
+	.textbox-background-image;*/
+}
+.dijistrap .dijitTextBoxFocused .dijitInputContainer {
+	/*background: @textbox-focused-background-color;*/
+}
+
+.dijistrap .dijitSelectErrorFocused,
+.dijistrap .dijitSelectErrorFocused .dijitButtonContents,
+.dijistrap .dijitTextBoxErrorFocused,
+.dijistrap .dijitTextBoxErrorFocused .dijitButtonNode {
+	/*border-color: @error-focused-border-color;*/
+}
+
+/* disabled state */
+.dijistrap .dijitSelectDisabled,
+.dijistrap .dijitSelectDisabled .dijitButtonContents,
+.dijistrap .dijitTextBoxDisabled,
+.dijistrap .dijitTextBoxDisabled .dijitButtonNode {
+	/*border-color: @disabled-border-color;*/
+}
+
+.dijistrap .dijitSelectDisabled,
+.dijistrap .dijitTextBoxDisabled,
+.dijistrap .dijitTextBoxDisabled .dijitInputContainer {
+	/*background-color: @textbox-disabled-background-color;
+	background-image: none;*/
+}
+
+.dijistrap .dijitSelectDisabled,
+.dijistrap .dijitTextBoxDisabled,
+.dijistrap .dijitTextBoxDisabled .dijitInputInner {
+	/*color: @disabled-text-color;*/
+}
+
+.dj_webkit .dijistrap .dijitDisabled input {
+    /* because WebKit lightens disabled input/textarea no matter what color you specify */
+	/*color: darken(@disabled-text-color, 5%)*/
+}
+
+.dj_webkit .dijistrap textarea.dijitTextAreaDisabled {
+    /* because WebKit lightens disabled input/textarea no matter what color you specify */
+	/*color: darken(@disabled-text-color, 40%)*/
+}
+
+/*========================= for special widgets =========================*/
+
+/* Input boxes with an arrow (for a drop down) */
+
+.dijistrap .dijitSelect .dijitArrowButtonInner,
+.dijistrap .dijitComboBox .dijitArrowButtonInner {
+	/*background-image: url("../@{image-form-common-arrows}");
+	background-position:-35px 53%;
+	background-repeat: no-repeat;
+	margin: 0;
+	width:16px;*/
+}
+
+.dijistrap .dijitComboBox .dijitArrowButtonInner {
+	/*border: 1px solid @arrowbutton-inner-border-color;*/	/*// white gutter around the arrow button*/
+}
+
+.dijistrap .dijitToolbar .dijitComboBox .dijitArrowButtonInner {
+	/*border: none;*/
+}
+
+.dijistrap .dijitToolbar .dijitComboBox .dijitArrowButtonInner {
+	/*border: none;*/
+}
+
+/* Add 1px vertical padding to the <input> where user types and the validation icon,
+   to match the 1px border on arrow button */
+.dijistrap .dijitSelectLabel,
+.dijistrap .dijitTextBox .dijitInputInner,
+.dijistrap .dijitValidationTextBox .dijitValidationContainer {
+	/*padding: 1px 0;*/
+	.refix;
+}
+
+.dijistrap .dijitComboBox .dijitButtonNode {
+	/*background-color: @arrowbutton-background-color;
+	.standard-gradient("../");*/
+}
+
+/* Arrow "hover" effect:
+ * The arrow button should change color whenever the mouse is in a position such that clicking it
+ * will toggle the drop down.   That's either (1) anywhere over the ComboBox or (2) over the arrow
+ * button, depending on the openOnClick setting for the widget.
+ */
+.dijistrap .dijitComboBoxOpenOnClickHover .dijitButtonNode,
+.dijistrap .dijitComboBox .dijitDownArrowButtonHover {
+	/*background-color:@arrowbutton-hovered-background-color;*/
+}
+
+.dijistrap .dijitComboBoxOpenOnClickHover .dijitArrowButtonInner,
+.dijistrap .dijitComboBox .dijitDownArrowButtonHover .dijitArrowButtonInner {
+	/*background-position:-70px 53%;*/
+}
+
+/* Arrow Button change when drop down is open */
+.dijistrap .dijitComboBox .dijitHasDropDownOpen {	/*// .dijitHasDropDown is on dijitArrowButton node*/
+	/*background-color: @pressed-background-color;
+	.active-gradient("../");*/
+	/*padding: 1px;*/	/*// Since no border on arrow button (see rule below)*/
+}	
+
+.dj_iequirks .dijistrap .dijitComboBox .dijitHasDropDownOpen {
+	/*padding: 1px 0;*/
+}
+
+.dijistrap .dijitComboBox .dijitHasDropDownOpen .dijitArrowButtonInner {
+	/*background-position:-70px 53%;
+	border: 0 none;*/
+}
+
+/* disabled state */
+.dijistrap div.dijitComboBoxDisabled .dijitArrowButtonInner {
+	/* specific selector set to override background-position setting from Button.js
+	 * (.dijistrap .dijitComboBoxDisabled .dijitArrowButtonInner) */
+	/*background-position:0 50%;
+	background-color:@disabled-background-color;*/
+}
+
+/*========================= hacks for browsers =========================*/
+/* it seems the input[type="hidden"] has a height (16px) too... this may cause the widget's height calculate error */
+.dj_ff3 .dijistrap .dijitInputField input[type="hidden"] {
+	/*display: none;
+	height: 0;
+	width: 0;*/
+}
+
+.dj_borderbox .dijistrap .dijitComboBox .dijitHasDropDownOpen .dijitArrowButtonInner {
+	/*width:18px;*/				/*// quirks mode means border-box sizing, so 18px with the border (same as 16px without border)*/
+}
+
+.dj_borderbox .dijistrap .dijitComboBoxFocused .dijitHasDropDownOpen .dijitArrowButtonInner {
+	/*width:16px;	*/			/*// when no border, then back to 16px just like content-box sizing*/
+}

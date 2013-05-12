@@ -1,0 +1,660 @@
+{
+   "data":{
+      "groups":[
+         {
+            "label":"College Details",
+            "id":"studentregister.college_details",
+            "columns":"1",
+            "multiple":false,
+            "fields":[
+               {
+                  "label":"Registration Number",
+                  "id":"studentregister.registration_number",
+                  "type":"number",
+                  "widget":"NumberTextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"number",
+                     "maxlength":"8",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":true,
+                  "affected by":[
+
+                  ]
+               },
+               {
+                  "label":"Student Id",
+                  "id":"studentregister.student_id",
+                  "type":"number",
+                  "widget":"NumberTextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"number",
+                     "maxlength":"10",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":true,
+                  "affected by":[
+
+                  ]
+               }
+            ]
+         },
+         {
+            "label":"Student Details",
+            "id":"studentregister.student_details",
+            "columns":"1",
+            "multiple":false,
+            "fields":[
+               {
+                  "label":"First Name",
+                  "id":"studentregister.first_name",
+                  "type":"text",
+                  "widget":"TextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"text",
+                     "maxlength":"15",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+
+                  ]
+               },
+               {
+                  "label":"Middle Name",
+                  "id":"studentregister.middle_name",
+                  "type":"text",
+                  "widget":"TextBox",
+                  "isrequired":false,
+                  "validation":{
+                     "type":"text",
+                     "maxlength":"15",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+
+                  ]
+               },
+               {
+                  "label":"Last Name",
+                  "id":"studentregister.last_name",
+                  "type":"text",
+                  "widget":"TextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"text",
+                     "maxlength":"15",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+
+                  ]
+               },
+               {
+                  "label":"Gender",
+                  "id":"studentregister.gender",
+                  "type":"enumeration",
+                  "widget":"ComboBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"text",
+                     "maxlength":"12",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "options":[
+                     {
+                        "label":"",
+                        "value":"error"
+                     },
+                     {
+                        "label":"male",
+                        "value":"male"
+                     },
+                     {
+                        "label":"female",
+                        "value":"female"
+                     }
+                  ],
+                  "affected by":[
+
+                  ]
+               },
+               {
+                  "label":"Date Of Birth",
+                  "id":"studentregister.date_of_birth",
+                  "type":"date",
+                  "widget":"DateTextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"date",
+                     "maxlength":"15",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+                     "studentregister.age"
+                  ]
+               },
+               {
+                  "label":"Mobile",
+                  "id":"studentregister.mobile",
+                  "type":"number",
+                  "widget":"NumberTextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"number",
+                     "maxlength":"10",
+                     "minlength":"10"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+
+                  ]
+               }
+            ]
+         },
+         {
+            "label":"Degree Details",
+            "id":"studentregister.degree_details",
+            "columns":"5",
+            "multiple":true,
+            "fields":[
+               {
+                  "label":"Last Degree",
+                  "id":"studentregister.last_degree",
+                  "type":"enumeration",
+                  "widget":"ComboBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"text",
+                     "maxlength":"25",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "options":[
+                     {
+                        "label":"",
+                        "value":"error"
+                     },
+                     {
+                        "label":"B.sc",
+                        "value":"B.sc"
+                     },
+                     {
+                        "label":"M.sc",
+                        "value":"M.sc"
+                     },
+                     {
+                        "label":"Intermediate",
+                        "value":"intermediate"
+                     },
+                     {
+                        "label":"high school",
+                        "value":"high school"
+                     }
+                  ],
+                  "affected by":[
+
+                  ]
+               },
+               {
+                  "label":"Specialization",
+                  "id":"studentregister.specialization",
+                  "type":"enumeration",
+                  "widget":"ComboBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"text",
+                     "maxlength":"25",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "options":[
+                     {
+                        "label":"",
+                        "value":"error"
+                     },
+                     {
+                        "label":"science",
+                        "value":"science"
+                     },
+                     {
+                        "label":"maths",
+                        "value":"maths"
+                     },
+                     {
+                        "label":"chemistry",
+                        "value":"chemistry"
+                     },
+                     {
+                        "label":"economics",
+                        "value":"economics"
+                     }
+                  ],
+                  "affected by":[
+                     "studentregister.last_degree"
+                  ]
+               },
+               {
+                  "label":"year",
+                  "id":"studentregister.year",
+                  "type":"enumeration",
+                  "widget":"ComboBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"number",
+                     "maxlength":"4",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "options":[
+                     {
+                        "label":"",
+                        "value":"error"
+                     },
+                     {
+                        "label":"2011",
+                        "value":"2011"
+                     },
+                     {
+                        "label":"2010",
+                        "value":"2010"
+                     },
+                     {
+                        "label":"2009",
+                        "value":"2009"
+                     },
+                     {
+                        "label":"2008",
+                        "value":"2008"
+                     }
+                  ],
+                  "affected by":[
+
+                  ]
+               },
+               {
+                  "label":"University",
+                  "id":"studentregister.university",
+                  "type":"text",
+                  "widget":"TextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"text",
+                     "maxlength":"25",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+
+                  ]
+               },
+               {
+                  "label":"Percentage",
+                  "id":"studentregister.percentage",
+                  "type":"number",
+                  "widget":"NumberTextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"number",
+                     "maxlength":"2",
+                     "minlength":"1"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+
+                  ]
+               }
+            ]
+         },
+         {
+            "label":"Correspondence Address",
+            "id":"studentregister.correspondence_Address",
+            "columns":"1",
+            "multiplue":false,
+            "fields":[
+               {
+                  "label":"Line1",
+                  "id":"studentregister.correspondence_line1",
+                  "type":"text",
+                  "widget":"TextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"text",
+                     "maxlength":"25",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+
+                  ]
+               },
+               {
+                  "label":"Line2",
+                  "id":"studentregister.correspondence_line2",
+                  "type":"text",
+                  "widget":"TextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"alphanumeric",
+                     "maxlength":"25",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+
+                  ]
+               },
+               {
+                  "label":"Line3",
+                  "id":"studentregister.correspondence_line3",
+                  "type":"text",
+                  "widget":"TextBox",
+                  "isrequired":false,
+                  "validation":{
+                     "type":"alphanumeric",
+                     "maxlength":"25",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+
+                  ]
+               },
+               {
+                  "label":"State",
+                  "id":"studentregister.correspondence_state",
+                  "type":"text",
+                  "widget":"TextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"text",
+                     "maxlength":"25",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+
+                  ]
+               },
+               {
+                  "label":"City",
+                  "id":"studentregister.correspondence_city",
+                  "type":"text",
+                  "widget":"TextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"text",
+                     "maxlength":"25",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+
+                  ]
+               },
+               {
+                  "label":"PinCode",
+                  "id":"studentregister.correspondence_pincode",
+                  "type":"number",
+                  "widget":"NumberTextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"number",
+                     "maxlength":"5",
+                     "minlength":"5"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+
+                  ]
+               }
+            ]
+         },
+         {
+            "label":"Parent's Details",
+            "id":"studentregister.parents_details",
+            "columns":"6",
+            "multiple":false,
+            "fields":[
+               {
+                  "label":"Father's Name",
+                  "id":"studentregister.fathers_name",
+                  "type":"text",
+                  "widget":"TextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"text",
+                     "maxlength":"25",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+
+                  ]
+               },
+               {
+                  "label":"Occupation",
+                  "id":"studentregister.father_occupation",
+                  "type":"text",
+                  "widget":"TextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"text",
+                     "maxlength":"25",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+
+                  ]
+               },
+               {
+                  "label":"Name Of Organization",
+                  "id":"studentregister.father_name_of_organization",
+                  "type":"text",
+                  "widget":"TextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"text",
+                     "maxlength":"25",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+
+                  ]
+               },
+               {
+                  "label":"Desigation",
+                  "id":"studentregister.father_designation",
+                  "type":"text",
+                  "widget":"TextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"text",
+                     "maxlength":"25",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+
+                  ]
+               },
+               {
+                  "label":"Email Id",
+                  "id":"studentregister.father_email_id",
+                  "type":"text",
+                  "widget":"TextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"alphanumeric",
+                     "maxlength":"25",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+
+                  ]
+               },
+               {
+                  "label":"Mobile Number",
+                  "id":"studentregister.father_mobile_number",
+                  "type":"number",
+                  "widget":"NumberTextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"number",
+                     "maxlength":"10",
+                     "minlength":"10"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+
+                  ]
+               },
+               {
+                  "label":"Mother's Name",
+                  "id":"studentregister.mothers_name",
+                  "type":"text",
+                  "widget":"TextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"text",
+                     "maxlength":"25",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+
+                  ]
+               },
+               {
+                  "label":"Occupation",
+                  "id":"studentregister.mother_occupation",
+                  "type":"text",
+                  "widget":"TextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"text",
+                     "maxlength":"25",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+
+                  ]
+               },
+               {
+                  "label":"Name Of Organization",
+                  "id":"studentregister.mother_name_of_organization",
+                  "type":"text",
+                  "widget":"TextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"text",
+                     "maxlength":"25",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+
+                  ]
+               },
+               {
+                  "label":"Desigation",
+                  "id":"studentregister.mother_designation",
+                  "type":"text",
+                  "widget":"TextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"text",
+                     "maxlength":"25",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+
+                  ]
+               },
+               {
+                  "label":"Email Id",
+                  "id":"studentregister.mother_email_id",
+                  "type":"text",
+                  "widget":"TextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"text",
+                     "maxlength":"25",
+                     "minlength":"2"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+
+                  ]
+               },
+               {
+                  "label":"Mobile number",
+                  "id":"studentregister.mother_mobile_number",
+                  "type":"number",
+                  "widget":"NumberTextBox",
+                  "isrequired":true,
+                  "validation":{
+                     "type":"number",
+                     "maxlength":"10",
+                     "minlength":"10"
+                  },
+                  "editable":true,
+                  "isunique":false,
+                  "affected by":[
+
+                  ]
+               }
+            ]
+         }
+      ]
+   },
+   "component":{
+      "type":"grid",
+      "basetable":"studentregistration",
+      "module":"registration",
+      "subject":"student",
+      "actor":"student"
+   }
+}

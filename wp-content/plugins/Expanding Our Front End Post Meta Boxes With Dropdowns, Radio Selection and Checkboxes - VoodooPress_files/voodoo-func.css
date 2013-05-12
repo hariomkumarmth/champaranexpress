@@ -1,0 +1,218 @@
+.clear {
+	clear: both;
+}
+.socialButtons {
+	margin-top: 10px;
+}
+.socialStuff {
+	float:left;
+	width:20%;
+	/* overflow:hidden; */
+}
+.iconBox {
+	float: left;
+	text-align: center;
+	margin-left: 2px;
+}
+.iconBox img {
+	margin-left: -2px;
+}
+.iconBox span {
+	font-weight: bold;
+	font-size: 1.2em;
+	color: rgba(0, 0, 0, 0.6);
+	text-shadow: 0 1px 1px #fff;
+}
+
+#voodoo-stackexchange img {
+	display: block;
+	margin: 0 auto;
+}
+
+.related {
+	width: 90%;
+	margin-top: 0px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	background: #9e9786;
+	background: rgba(158, 151, 134, 0.6);
+	border: 4px double #ffffff;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-o-border-radius: 7px;
+	border-radius: 7px;
+	padding: 5px;
+	-webkit-box-shadow: 5px 5px 12px rgba(64, 31, 31, 0.5);
+	-moz-box-shadow: 5px 5px 12px rgba(64, 31, 31, 0.5);
+	box-shadow: 5px 5px 12px rgba(64, 31, 31, 0.5);
+}
+#content .related h4.content-title {
+	font-weight: bold;
+	text-indent: 1em;
+	font-style: italic;
+	color: rgba(0, 0, 0, 0.6);
+	text-shadow: 0 1px 1px #fff;
+	margin-bottom: 0px;
+	font-size: 1.3em;
+}
+#content .related ul {
+	margin-bottom: 5px;
+}
+.related ul li a {
+	color: #401f1f;
+}
+
+.googleAd160 {
+	display: block;
+	margin: 0 auto;
+	width: 160px;
+}
+.wpcf7 {
+	margin-left: 25px;
+	background: #9e9786;
+	background: rgba(158, 151, 134, 0.6);
+	padding: 15px;
+	border: 4px double #fff;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-o-border-radius: 7px;
+	border-radius: 7px;
+	-webkit-box-shadow: 5px 5px 12px rgba(64, 31, 31, 0.5);
+	-moz-box-shadow: 5px 5px 12px rgba(64, 31, 31, 0.5);
+	box-shadow: 5px 5px 12px rgba(64, 31, 31, 0.5);
+}
+.wpcf7-form fieldset {
+	margin: 0 0 10px 0;
+}
+.wpcf7-form fieldset label {
+	display: block;
+	font-weight: bold;
+	line-height: 1.4;
+	color: #666;
+	color: rgba(0, 0, 0, 0.6);
+	text-shadow: 0 1px 1px #fff;
+	margin-left: 10px;
+}
+.wpcf7-form fieldset:last-child {
+	margin: 0;
+}
+.wpcf7-form fieldset input[type="text"],
+.wpcf7-form fieldset input[type="password"], 
+.wpcf7-form fieldset textarea {
+	width: 215px;
+	padding: 5px 8px;
+	font-size: 1.2em;
+	color: #666;
+	border: none;
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 12%, from(#999), to(#fff));
+	background-image: -moz-linear-gradient(0% 12% 90deg, #fff, #999);
+	background: #FFFFFF url('images/grad.jpg') left top repeat-x;
+	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+}
+.wpcf7-form fieldset textarea {
+	width: 430px;
+}
+.wpcf7-form input[type="submit"] {
+	padding: 8px 15px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	line-height: 1;
+	color: #444;
+	border: none;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.85);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#bbb));
+	background-image: -moz-linear-gradient(0 100% 90deg, #fff, #bbb);
+	background: #FFFFFF url('images/grad.jpg') left top repeat-x;
+	-webkit-border-radius: 23px;
+	-moz-border-radius: 23px;
+	-o-border-radius: 23px;
+	border-radius: 23px;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+.wpcf7-form fieldset input[type="text"]:focus, .wpcf7-form fieldset input[type="password"]:focus, .wpcf7-form fieldset textarea:focus,
+.wpcf7-form fieldset input[type="text"]:hover, .wpcf7-form fieldset input[type="password"]:hover, .wpcf7-form fieldset textarea:hover,
+.wpcf7-form input[type="submit"]:focus, .wpcf7-form input[type="submit"]:hover {
+	margin: -1px;
+	border: 1px solid #401f1f;
+	-webkit-box-shadow: 0 0 12px rgba(64, 31, 31, 0.5);
+	-moz-box-shadow: 0 0 12px rgba(64, 31, 31, 0.5);
+	box-shadow: 0 0 12px rgba(64, 31, 31, 0.5);
+}
+@-webkit-keyframes pulse {
+	0% {
+		-webkit-box-shadow: 0 0 12px rgba(64, 31, 31, 0.2);
+	}
+	50% {
+		-webkit-box-shadow: 0 0 12px rgba(64, 31, 31, 0.9);
+	}
+	100% {
+		-webkit-box-shadow: 0 0 12px rgba(64, 31, 31, 0.2);
+	}
+}
+.wpcf7-form fieldset input[type="text"]:focus,
+.wpcf7-form fieldset input[type="password"]:focus,
+.wpcf7-form fieldset textarea:focus {
+	-webkit-animation: pulse 1.5s infinite ease-in-out;
+}
+.wpcf7-form fieldset input[type="submit"]:hover,
+.wpcf7-form fieldset input[type="submit"]:focus {
+	-webkit-animation: pulse 1.5s infinite ease-in-out;
+}
+
+.commentcount {
+	text-indent: 1em;
+}
+
+#voodoo-reg {
+	float: right;
+	width: 300px;
+	margin: 0.5em 4em 0 0;
+	background-color: #9e9786;
+	background-color: rgba(158, 151, 134, 0.4);
+	background-image: url("http://voodoopress.com/wp-content/themes/voodoochild2011/images/voodoosprite.png");
+	background-position: -10px -66.5px;
+	background-repeat: no-repeat;
+	padding: 5px 0 5px 3em;
+	font-size: 1.25em;
+	text-indent: 30px;
+	border: 4px double #fff;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-o-border-radius: 7px;
+	border-radius: 7px;
+	-webkit-box-shadow: 5px 5px 12px rgba(64, 31, 31, 0.5);
+	-moz-box-shadow: 5px 5px 12px rgba(64, 31, 31, 0.5);
+	box-shadow: 5px 5px 12px rgba(64, 31, 31, 0.5);
+	color: #666;
+	color: rgba(0, 0, 0, 0.6);
+	text-shadow: 0 1px 1px #fff;
+}
+#voodoo-reg span {
+	font-weight: bold;
+	color: #666;
+	color: rgba(0, 0, 0, 0.6);
+	text-shadow: 0 1px 1px #fff;
+}
+@media screen and (max-width: 600px) {
+	#reg-wrap, #reg-wrap-in {
+		display: none;
+	}
+}
+#voodoo-register {
+	float: right;
+	width: 300px;
+}
+@media screen and (min-width: 800px) {
+	.ad-widget-area {
+		width: 730px;
+	}
+}
